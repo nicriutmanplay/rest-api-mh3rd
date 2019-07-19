@@ -13,6 +13,7 @@ defmodule MyAppWeb.Router do
   scope "/api", MyAppWeb do
     pipe_through :api
     post "/users/sign_in", UserController, :sign_in
+    resources "/monstruos", MonstruoController, except: [:new, :edit]
   end
 
   scope "/api", MyAppWeb do
